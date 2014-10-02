@@ -10,6 +10,7 @@ angular.module('slick', []).directive('slick', [
         currentIndex: '=',
         accessibility: '@',
         arrows: '@',
+        asNavFor: '@',
         autoplay: '@',
         autoplaySpeed: '@',
         centerMode: '@',
@@ -48,6 +49,7 @@ angular.module('slick', []).directive('slick', [
             slider.slick({
               accessibility: scope.accessibility !== 'false',
               arrows: scope.arrows !== 'false',
+              asNavFor: scope.asNavFor || null,
               autoplay: scope.autoplay === 'true',
               autoplaySpeed: scope.autoplaySpeed != null ? parseInt(scope.autoplaySpeed, 10) : 3000,
               centerMode: scope.centerMode === 'true',

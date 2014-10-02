@@ -9,6 +9,7 @@ angular.module('slick', [])
       currentIndex: "="
       accessibility: "@"
       arrows: "@"
+      asNavFor: "@"
       autoplay: "@"
       autoplaySpeed: "@"
       centerMode: "@"
@@ -44,6 +45,7 @@ angular.module('slick', [])
           slider.slick
             accessibility: scope.accessibility isnt "false"
             arrows: scope.arrows isnt "false"
+            asNavFor: scope.asNavFor or null
             autoplay: scope.autoplay is "true"
             autoplaySpeed: if scope.autoplaySpeed? then parseInt(scope.autoplaySpeed, 10) else 3000
             centerMode: scope.centerMode is "true"
